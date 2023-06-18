@@ -1,58 +1,23 @@
-name: Docs
+name: Deploy to GitHub Pages
 
 on:
-  pull_request:
-    branches: [main]
   push:
-    branches: [main]
+    branches: [ master ]
   workflow_dispatch:
-
-# set permissions of GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true # allow one concurrent deployment
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
-
-      - name: Set up node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: pnpm
-
-      - name: Install dependencies
+      - name: Install and Build
         run: |
-          pnpm install
-          pnpm build
-
-      - uses: actions/upload-pages-artifact@v1
-        with:
-          path: build
-
-  deploy:
-    name: Deploy
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+          npm install
+          npm run build
+          
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: public
