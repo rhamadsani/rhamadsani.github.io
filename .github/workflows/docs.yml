@@ -31,6 +31,18 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
+      - run: |
+          echo "<!DOCTYPE html>
+          <html lang='en'>
+            <head>
+              <meta charset='UTF-8'>
+              <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+              <title>Svelte App</title>
+            </head>
+            <body>
+              <script src='build/bundle.js'></script>
+            </body>
+          </html>" > ./build/index.htm
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
