@@ -40,9 +40,9 @@ jobs:
               <title>Svelte App</title>
             </head>
             <body>
-              <script src='build/bundle.js'></script>
+              <script src='build/index.js'></script>
             </body>
-          </html>" > ./build/index.htm
+          </html>" > ./build/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
