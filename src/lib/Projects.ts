@@ -17,7 +17,7 @@ const projects = [
 	},
 	{
 		title: 'Uptimal',
-		technologies: ['NodeJs', 'PHP', 'MongoDb', 'golang', 'Laravel', 'Svelte']
+		technologies: ['NodeJs', 'PHP', 'MongoDb', 'golang', 'Laravel', 'Svelte'], 
 		description: 'In 2021, as a lead team member at Jetorbit, I played a crucial role in the development of `Uptimal`, an application designed for comprehensive resource checks, including API, IP, and Domain health monitoring. We prioritized delivering a swift and reliable platform that ensures users can easily assess the health and performance of their digital resources. My responsibilities included managing both backend and frontend development, crafting the system architecture, and implementing key features to maintain high standards for accuracy, responsiveness, and user satisfaction, all in alignment with the company’s strategic goals.',
 		url: 'https://github.com/rhamadsani', 
 		type: 'app'
