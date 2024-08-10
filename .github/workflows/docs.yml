@@ -35,7 +35,7 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
-      - run: mkdir ./build/prerendered/_app
+      - run: mkdir -p ./build/prerendered/_app
       - run: cp -r ./build/client/_app/* ./build/prerendered/_app
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
