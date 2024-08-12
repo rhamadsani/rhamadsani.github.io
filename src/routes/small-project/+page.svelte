@@ -1,5 +1,5 @@
 <script>
-	import projects from '$lib/SmallProjects';
+	import smallprojects from '$lib/SmallProjects';
 </script>
 
 <svelte:head>
@@ -12,7 +12,7 @@
 		<p class="note">
 			Open Public Small Project That I'm Work On.
 		</p>
-		{#each projects as project}
+		{#each smallprojects as project}
 			<div class="project">
 				<div class="header">
 					<h2>
