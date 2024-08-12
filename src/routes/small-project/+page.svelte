@@ -1,5 +1,5 @@
 <script>
-	import projects from '$lib/Projects';
+	import projects from '$lib/SmallProjects';
 </script>
 
 <svelte:head>
@@ -8,10 +8,9 @@
 
 <div class="projectContainer">
 	<div class="projects">
-		<h1>Projects</h1>
+		<h1>Small Projects</h1>
 		<p class="note">
-			Note: almost all my projects are under the Company I work for so I can't share those projects. If there is anything you would like to know more about, please feel free to contact me.
-			<a class="clink" href="/small-project">Small Project Here</a>
+			Open Public Small Project That I'm Work On.
 		</p>
 		{#each projects as project}
 			<div class="project">
@@ -22,8 +21,8 @@
 					<div class="techsContainer">
 						Technologies:
 						<div class="techs">
-							{#each project.technologies as tech, i}
-								<div style="background:{project.colorTechs[i]}; padding: 0 8px; border-radius: 5px;">{tech}</div>
+							{#each project.technologies as tech}
+								<div>{tech}</div>
 							{/each}
 						</div>
 					</div>
@@ -152,11 +151,6 @@
 		.button {
 			max-width: 200px;
 		}
-	}
-	.clink {
-		color: #ff8976;
-		text-decoration: underline;
-		font-style: italic;
 	}
 
 	@media (min-width: 600px) {
