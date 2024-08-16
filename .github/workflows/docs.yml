@@ -36,7 +36,7 @@ jobs:
       - name: Env File
         env: 
           MONGO_URL : ${{ secrets.MONGO_URL }}
-        run: 
+        run: |
           touch .env
           echo MONGO_URL='$MONGO_URL' >> .env
           echo "cat .env"

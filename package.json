@@ -1,6 +1,6 @@
 {
-	"name": "gianmarco.xyz",
-	"version": "0.0.1",
+	"name": "rhamadsani.github.io",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
