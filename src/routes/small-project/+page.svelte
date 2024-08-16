@@ -1,9 +1,17 @@
 <script lang="ts">
 	import smallprojects from '$lib/SmallProjects';
+	import { onMount } from 'svelte';
     // Comes from +page.server.ts
-    export let data: any;
-
-	console.log(data)
+    let data = [];
+	async function callApiData()
+	{
+		const res = await fetch(`${window?.location?.origin}/projects/api?group=small`);
+		data = await res.json();
+	}
+	
+	onMount(() => {
+		callApiData();
+	});
 </script>
 <svelte:head>
 	<title>Rhamad Nursani Sidik — Samll Projects</title>

@@ -1,5 +1,16 @@
 <script>
 	import projects from '$lib/Projects';
+	import { onMount } from 'svelte';
+	let data = [];
+	async function callApiData()
+	{
+		const res = await fetch(`${window?.location?.origin}/projects/api?group=big`);
+		data = await res.json();
+	}
+	
+	onMount(() => {
+		callApiData();
+	});
 </script>
 
 <svelte:head>

@@ -16,7 +16,7 @@ export async function searchCollection(collection_name:string, search:string): P
 {
     // get repositories from MongoDB with search query and regex options
     // console.log('asdfads', db)
-    const data = await db.collection(collection_name).find({title:{$regex:search, $options:'i'}}).project({_id:0}).toArray();
+    const data = await db.collection(collection_name).find({group:{$regex:search, $options:'i'}}).project({_id:0}).toArray();
 // console.log(db)
     // console.log('dfasf',db)
     // return JSON response
