@@ -41,7 +41,11 @@ jobs:
           echo MONGO_URL='$MONGO_URL' >> .env
           echo "cat .env"
           cat .env
+          echo "ls -a ."
+          ls -a .
 
+          echo "ls -a ${{ github.workspace }}"
+          ls -a ${{ github.workspace }}
       - run: npm ci
       - run: npm run build
       # - run: mkdir -p ./build/prerendered/_app
