@@ -1,5 +1,5 @@
 import { getDB } from '$db/mongo';
-const db = getDB('test-app');
+const db = getDB();
 
 export async function getCollection(collection_name:string, skip:number, limit:number): Promise<JSON>
 {

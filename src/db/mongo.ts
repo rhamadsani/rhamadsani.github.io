@@ -14,7 +14,6 @@ export async function disconnect(): Promise<void> {
 }
 
 // get the database
-export function getDB(name: string | undefined): any {
-    console.log(client)
-    return client.db(name);
+export function getDB(): any {
+    return client.db();
 }
