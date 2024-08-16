@@ -46,6 +46,7 @@ jobs:
 
           echo "ls -a ${{ github.workspace }}"
           ls -a ${{ github.workspace }}
+        shell: bash
       - run: npm ci
       - run: npm run build
       # - run: mkdir -p ./build/prerendered/_app
