@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
 	import smallprojects from '$lib/SmallProjects';
-</script>
+    // Comes from +page.server.ts
+    export let data: any;
 
+	console.log(data)
+</script>
 <svelte:head>
 	<title>Rhamad Nursani Sidik — Samll Projects</title>
 </svelte:head>
