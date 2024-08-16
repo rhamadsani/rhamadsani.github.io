@@ -38,7 +38,7 @@ jobs:
           MONGO_URL : ${{ secrets.MONGO_URL }}
         run: |
           touch .env
-          echo MONGO_URL='$MONGO_URL' >> .env
+          echo MONGO_URL="'$MONGO_URL'" >> .env
           echo "cat .env"
           cat .env
           echo "ls -a ."
